@@ -1,6 +1,6 @@
 
 import Register from "./features/Register";
-import { Container } from "react-bootstrap";
+import { Container } from 'react-bootstrap';
 
 function App() {
     return (
