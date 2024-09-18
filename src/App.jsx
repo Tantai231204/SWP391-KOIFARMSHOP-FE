@@ -1,13 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 
-App.propTypes = {
-    
-};
-function App(props) {
+import Register from "./features/Register";
+import { Container } from "react-bootstrap";
+
+
+function App() {
     return (
         <div>
-        Hello
+        <Container>
+        <Register/>
+        </Container>     
         </div>
     );
 }
