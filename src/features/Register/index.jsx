@@ -6,10 +6,8 @@ Register.propTypes = {
 };
 
 function Register() {
-    return (
-        <div className='register-page-container'>
+    return (      
          <RegisterForm/>
-        </div>
     );
 }
 

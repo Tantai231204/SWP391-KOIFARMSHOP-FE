@@ -27,6 +27,7 @@ function RegisterForm() {
     console.log("Register Values:", formValue);
   };
   return (
+    <div className="register-page-container">
     <div className="register-page">
       <form>
         <h2>Register Account</h2>
@@ -84,6 +85,7 @@ function RegisterForm() {
           Register
         </button>
       </form>
+    </div>
     </div>
   );
 }

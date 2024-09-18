@@ -2,7 +2,6 @@
 import Register from "./features/Register";
 import { Container } from "react-bootstrap";
 
-
 function App() {
     return (
         <div>
@@ -12,5 +11,4 @@ function App() {
         </div>
     );
 }
-
 export default App
