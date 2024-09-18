@@ -1,14 +1,15 @@
 
-import Register from ".Register";
-import { Container } from 'react-bootstrap';
+import { Routes, Route } from 'react-router-dom';
+import Register from './Register';
+import Home from './pages/HomePage';
 
 function App() {
-    return (
-        <div>
-        <Container>
-        <Register/>
-        </Container>     
-        </div>
-    );
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/Register" element={<Register />} />
+    </Routes>
+  );
 }
-export default App
+
+export default App;
