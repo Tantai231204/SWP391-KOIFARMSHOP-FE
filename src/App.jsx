@@ -1,5 +1,5 @@
 
-import Register from "./features/Register";
+import Register from ".Register";
 import { Container } from 'react-bootstrap';
 
 function App() {
