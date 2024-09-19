@@ -8,7 +8,7 @@ function ModalEditUser() {
     password: "",
     confirmPassword: "",
     email: "",
-    address:"",
+    address: "",
     image: null,
     preview: null,
   };
@@ -72,6 +72,7 @@ function ModalEditUser() {
         open={open}
         onOk={handleOk}
         onCancel={handleCancel}
+        centered
       >
         <form>
           <div className="edit-user-container">
