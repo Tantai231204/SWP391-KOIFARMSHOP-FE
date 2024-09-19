@@ -45,8 +45,8 @@ function RegisterForm() {
     console.log("Register Values:", formValue);
   };
   return (
-    <div className="register-page-container">
-      <div className="register-page">
+    <div className="register-form-container">
+      <div className="register-form">
         <form>
           <h2>Register Account</h2>
           <div>
