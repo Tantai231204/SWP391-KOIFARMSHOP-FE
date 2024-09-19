@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
-import "./style.scss";
+import "./Register.scss";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 RegisterForm.propTypes = {
   onSubmit: PropTypes.func,
-};
+}; 
 const initFormValue = {
   firstName: "",
   lastName: "",
@@ -12,13 +13,12 @@ const initFormValue = {
   confirmPassword: "",
   email: "",
 };
-
 function RegisterForm() {
+  const navigate = useNavigate(); 
   const [formValue, setFormValue] = useState(initFormValue);
   const handleChange = (event) => {
     const { value, name } = event.target;
     let isValid = true;
-
     if (name === "email") {
       const emailPattern = /^[^\s@]+@gmail.com$/;
       isValid = emailPattern.test(value);
@@ -32,7 +32,6 @@ function RegisterForm() {
       console.log("Giá trị không hợp lệ:", name);
     }
   };
-  const navigate = useNavigate(); 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (formValue.password.length < 6) {
@@ -59,7 +58,7 @@ function RegisterForm() {
               name="firstName"
               value={formValue.firstName}
               onChange={handleChange}
-            />
+              required/>
           </div>
           <div>
             <label className="form-label">Last Name:</label>
@@ -69,7 +68,7 @@ function RegisterForm() {
               name="lastName"
               value={formValue.lastName}
               onChange={handleChange}
-            />
+              required/>
           </div>
           <div>
             <label className="form-label">Password:</label>
@@ -79,7 +78,7 @@ function RegisterForm() {
               name="password"
               value={formValue.password}
               onChange={handleChange}
-            />
+              required/>
           </div>
           <div>
             <label className="form-label">Confirm Password:</label>
@@ -89,7 +88,7 @@ function RegisterForm() {
               name="confirmPassword"
               value={formValue.confirmPassword}
               onChange={handleChange}
-            />
+              required/>
           </div>
           <div>
             <label className="form-label">Emai:</label>
@@ -99,7 +98,7 @@ function RegisterForm() {
               name="email"
               value={formValue.email}
               onChange={handleChange}
-            />
+              required/>
           </div>
           <button
             type="submit"
@@ -109,6 +108,10 @@ function RegisterForm() {
             Register
           </button>
         </form>
+        <div className="back-to-login"> 
+        <span>Bạn đã là thành viên ?</span>
+        <Link to="/Login">Đăng nhập ngay</Link>
+        </div>
       </div>
     </div>
   );
