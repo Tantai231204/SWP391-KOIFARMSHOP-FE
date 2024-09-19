@@ -8,6 +8,7 @@ function ModalEditUser() {
     password: "",
     confirmPassword: "",
     email: "",
+    address:"",
     image: null,
     preview: null,
   };
@@ -139,6 +140,17 @@ function ModalEditUser() {
                 name="email"
                 value={formValue.email}
                 onChange={handleChange}
+              />
+            </div>
+            <div>
+              <label className="form-label">Address:</label>
+              <input
+                className="form-control"
+                type="text"
+                name="address"
+                value={formValue.address}
+                onChange={handleChange}
+                required
               />
             </div>
           </div>

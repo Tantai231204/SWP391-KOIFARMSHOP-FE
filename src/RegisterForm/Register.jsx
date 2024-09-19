@@ -12,6 +12,7 @@ const initFormValue = {
   password: "",
   confirmPassword: "",
   email: "",
+  address:"",
 };
 function RegisterForm() {
   const navigate = useNavigate(); 
@@ -97,6 +98,16 @@ function RegisterForm() {
               type="text"
               name="email"
               value={formValue.email}
+              onChange={handleChange}
+              required/>
+          </div>
+          <div>
+            <label className="form-label">Address:</label>
+            <input
+              className="form-control"
+              type="text"
+              name="address"
+              value={formValue.address}
               onChange={handleChange}
               required/>
           </div>
