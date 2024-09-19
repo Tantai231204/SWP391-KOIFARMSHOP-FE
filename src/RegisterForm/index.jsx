@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import "./style.scss";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 RegisterForm.propTypes = {
   onSubmit: PropTypes.func,
 };
@@ -31,7 +32,7 @@ function RegisterForm() {
       console.log("Giá trị không hợp lệ:", name);
     }
   };
-
+  const navigate = useNavigate(); 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (formValue.password.length < 6) {
@@ -43,6 +44,7 @@ function RegisterForm() {
       return;
     }
     console.log("Register Values:", formValue);
+    navigate("/");
   };
   return (
     <div className="register-form-container">
