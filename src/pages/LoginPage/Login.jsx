@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "./login.scss";
-import { Button } from "antd";
 
 function Login() {
   return (
@@ -14,13 +13,10 @@ function Login() {
           Đăng nhập
         </button>
       </form>
+      <button className="google-login-button">Đăng nhập với Google</button>
       <div className="links">
-        <Button>
-          <Link to="/register">Đăng ký</Link>
-        </Button>
-        <Button>
-          <Link to="/forgot-password">Quên mật khẩu</Link>
-        </Button>
+        <Link to="/register">Đăng ký</Link>
+        <Link to="/forgot-password">Quên mật khẩu</Link>
       </div>
     </div>
   );
