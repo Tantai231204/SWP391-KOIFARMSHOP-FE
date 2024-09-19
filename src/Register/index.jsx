@@ -7,7 +7,7 @@ Register.propTypes = {
 
 function Register() {
     return (      
-         <RegisterForm/>
+    <RegisterForm/>
     );
 }
 

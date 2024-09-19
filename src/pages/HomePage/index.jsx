@@ -1,6 +1,5 @@
-
-import { Link } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
+import ModalEditUser from "../../EditUserModal";
 const Home = () => {
   return (
     <div>
@@ -8,6 +7,7 @@ const Home = () => {
       <Link to="/Register">
         <button>Go to Register</button>
       </Link>
+      <ModalEditUser/>
     </div>
   );
 };
