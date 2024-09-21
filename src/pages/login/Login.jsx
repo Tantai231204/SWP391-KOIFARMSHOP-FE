@@ -31,7 +31,7 @@ function LoginForm({ setUser }) {
 
   return (
     <div className="login-container">
-      <img src="/logo.svg" alt="Logo" className="logo" />
+      <img src="/src/img/logo.svg" alt="Logo" className="logo" />
       <h2 className="shop-name">Koifish</h2>
 
       <div>

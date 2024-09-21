@@ -1,0 +1,54 @@
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+.admin-title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 48px;
+    margin-bottom: 80px;
+    background-image: url('/src/img/banner1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.button-manage {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around; 
+    gap: 25px; 
+     width: 100%;
+}
+
+.button-manage button, .button-last button {
+    padding: 120px 180px; 
+    width: 200px; 
+    font-size: 25px;
+    border-radius: 50px;
+    background-color: #FAF3EA;
+    font-weight: 600;
+}
+
+.button-last {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+.button-manage div {
+    display: flex;
+    justify-content: center;
+    gap: 68px; 
+    width: 100%; 
+}
+

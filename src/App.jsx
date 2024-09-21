@@ -1,16 +1,28 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/home";
-import RegisterForm from "./pages/register/Register";
-import LoginForm from "./pages/login/Login";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import LoginForm from './pages/login/Login';
+import RegisterForm from './pages/register/Register';
+import Admin from './pages/admin/index';
+import Home from './pages/home/index';
 function App() {
-  return (
-    <>
-      <Routes>
-        <Route path="/" element={<Home />} exact />
-        <Route path="/Register" element={<RegisterForm />} />
-        <Route path="/Login" element={<LoginForm />} />
-      </Routes>
-    </>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/login",
+      element: <LoginForm />,
+    },
+    {
+      path: "/register",
+      element:<div className='register-container'><RegisterForm /></div>,
+    },
+    {
+      path: "/admin",
+      element: <Admin />,
+    },
+  ]);
+  return <RouterProvider router={router} />;
 }
+
 export default App;

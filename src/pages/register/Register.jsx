@@ -9,6 +9,7 @@ RegisterForm.propTypes = {
 const initFormValue = {
   firstName: "",
   lastName: "",
+  userName: "",
   password: "",
   confirmPassword: "",
   email: "",
@@ -44,7 +45,7 @@ function RegisterForm() {
       return;
     }
     console.log("Register Values:", formValue);
-    navigate("/");
+    navigate("/login");
   };
   return (
     <div className="register-form-container">
@@ -52,7 +53,7 @@ function RegisterForm() {
         <form>
           <h2>Register Account</h2>
           <div>
-            <label className="form-label">First Name:</label>
+            <label className="form-label">Họ:</label>
             <input
               className="form-control"
               type="text"
@@ -62,7 +63,7 @@ function RegisterForm() {
               required/>
           </div>
           <div>
-            <label className="form-label">Last Name:</label>
+            <label className="form-label">Tên:</label>
             <input
               className="form-control"
               type="text"
@@ -72,7 +73,17 @@ function RegisterForm() {
               required/>
           </div>
           <div>
-            <label className="form-label">Password:</label>
+            <label className="form-label">Tên đăng nhập:</label>
+            <input
+              className="form-control"
+              type="text"
+              name="userName"
+              value={formValue.userName}
+              onChange={handleChange}
+              required/>
+          </div>
+          <div>
+            <label className="form-label">Mật khẩu:</label>
             <input
               className="form-control"
               type="password"
@@ -82,7 +93,7 @@ function RegisterForm() {
               required/>
           </div>
           <div>
-            <label className="form-label">Confirm Password:</label>
+            <label className="form-label">Nhập lại mật khẩu:</label>
             <input
               className="form-control"
               type="password"
@@ -102,7 +113,7 @@ function RegisterForm() {
               required/>
           </div>
           <div>
-            <label className="form-label">Address:</label>
+            <label className="form-label">Địa chỉ:</label>
             <input
               className="form-control"
               type="text"
