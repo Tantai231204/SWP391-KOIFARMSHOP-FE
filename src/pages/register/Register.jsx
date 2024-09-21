@@ -48,10 +48,9 @@ function RegisterForm() {
     navigate("/login");
   };
   return (
-    <div className="register-form-container">
-      <div className="register-form">
+    <div className="register__form">
         <form>
-          <h2>Register Account</h2>
+          <h2>Đăng ký</h2>
           <div>
             <label className="form-label">Họ:</label>
             <input
@@ -134,7 +133,6 @@ function RegisterForm() {
         <span>Bạn đã là thành viên ?</span>
         <Link to="/Login">Đăng nhập ngay</Link>
         </div>
-      </div>
     </div>
   );
 }

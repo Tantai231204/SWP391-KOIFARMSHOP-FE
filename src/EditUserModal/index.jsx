@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, Modal } from "antd";
-
+import './index.scss'
 function ModalEditUser() {
   const initFormValue = {
     firstName: "",
@@ -68,17 +68,17 @@ function ModalEditUser() {
         Thay đổi thông tin cá nhân
       </Button>
       <Modal
-        title="Basic Modal"
+        title="Cập nhật thông tin cá nhân"
         open={open}
         onOk={handleOk}
         onCancel={handleCancel}
         centered
-      >
+      > 
         <form>
-          <div className="edit-user-container">
+          <div className="edit-user-modal">
             <h2>Thông tin cá nhân</h2>
             <div>
-              <label className="form-label">Upload Image:</label>
+              <label className="form-label">Ảnh đại diện:</label>
               {formValue.preview && (
                 <img
                   src={formValue.preview}
@@ -87,14 +87,14 @@ function ModalEditUser() {
                 />
               )}
               <input
-                className="form-control"
+                className="form-control user__img"
                 type="file"
                 name="image"
                 onChange={handleImageChange}
               />
             </div>
             <div>
-              <label className="form-label">First Name:</label>
+              <label className="form-label">Họ:</label>
               <input
                 className="form-control"
                 type="text"
@@ -104,7 +104,7 @@ function ModalEditUser() {
               />
             </div>
             <div>
-              <label className="form-label">Last Name:</label>
+              <label className="form-label">Tên:</label>
               <input
                 className="form-control"
                 type="text"
@@ -114,7 +114,7 @@ function ModalEditUser() {
               />
             </div>
             <div>
-              <label className="form-label">Password:</label>
+              <label className="form-label">Mật khẩu mới:</label>
               <input
                 className="form-control"
                 type="password"
@@ -124,7 +124,7 @@ function ModalEditUser() {
               />
             </div>
             <div>
-              <label className="form-label">Confirm Password:</label>
+              <label className="form-label">Nhập lại mật khẩu mới:</label>
               <input
                 className="form-control"
                 type="password"
@@ -144,7 +144,7 @@ function ModalEditUser() {
               />
             </div>
             <div>
-              <label className="form-label">Address:</label>
+              <label className="form-label">Địa chỉ:</label>
               <input
                 className="form-control"
                 type="text"

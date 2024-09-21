@@ -15,7 +15,7 @@ function App() {
     },
     {
       path: "/register",
-      element:<div className='register-container'><RegisterForm /></div>,
+      element:<div className='register'><RegisterForm /></div>,
     },
     {
       path: "/admin",
