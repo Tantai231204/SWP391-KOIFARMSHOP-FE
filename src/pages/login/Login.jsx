@@ -1,18 +1,19 @@
 import PropTypes from "prop-types";
-import "./login.scss";
+import logo from '/src/img/logo.svg'
 import { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from "react-router-dom";
+import "./login.scss";
 
-LoginForm.propTypes = {
+LoginPage.propTypes = {
   setUser: PropTypes.func,
 };
 
 const initFormValue = {
-  email: "",
+  username: "",
   password: "",
 };
 
-function LoginForm({ setUser }) {
+function LoginPage() {
   const [formValue, setFormValue] = useState(initFormValue);
 
   const handleChange = (event) => {
@@ -27,15 +28,17 @@ function LoginForm({ setUser }) {
     event.preventDefault();
     console.log("Login Values:", formValue);
     // cho api login
+    Navigate("/home"); // chuyen thang toi home khi logic, chua co login logic
   };
 
   return (
     <div className="login-container">
-      <img src="/src/img/logo.svg" alt="Logo" className="logo" />
-      <h2 className="shop-name">Koifish</h2>
+      <div className="login__logo">
+        <img src={logo} alt="Logo" className="logo" />
+        <h2 className="shop-name">Koifish</h2>
+      </div>
 
       <div>
-
         <form onSubmit={handleSubmit}>
           <div>
             <label className="form-label"></label>
@@ -75,4 +78,4 @@ function LoginForm({ setUser }) {
   );
 }
 
-export default LoginForm;
+export default LoginPage;

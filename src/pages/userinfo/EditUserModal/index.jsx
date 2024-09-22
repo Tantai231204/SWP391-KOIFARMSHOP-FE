@@ -75,7 +75,7 @@ function ModalEditUser() {
         centered
       > 
         <form>
-          <div className="edit-user-modal">
+          <div className="edit-user__modal">
             <h2>Thông tin cá nhân</h2>
             <div>
               <label className="form-label">Ảnh đại diện:</label>

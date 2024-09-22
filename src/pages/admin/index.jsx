@@ -9,9 +9,9 @@ function Admin() {
     <>
       <Header />
       <Container>
-      <div className="admin-container">
-        <div className="admin-title"> Quản lý </div>
-        <div className="button-manage">
+      <div className="admin__container">
+        <div className="admin__title"> Quản lý </div>
+        <div className="button__manage">
           <div>
             <Button
               icon={<img src={logo} alt="logo" style={{ width: "24px" }} />}
@@ -37,7 +37,7 @@ function Admin() {
             </Button>
           </div>
         </div>
-        <div className="button-last">
+        <div className="button__last">
           <Button
             icon={<img src={logo} alt="logo" style={{ width: "24px" }} />}
           >
