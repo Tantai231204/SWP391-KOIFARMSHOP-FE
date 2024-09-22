@@ -17,20 +17,20 @@ const UserInfoPage = () => {
       <Container>
         <div className="userinfo__container">
           <img src={logo} alt="ảnh đại diện" />
-          <div className="userinfo__item">
-            <div>
-              <span>Tên:</span> {user.fullName}
+          <div>
+            <div className="userinfo__item">
+              <span >Tên:</span> {user.fullName}
             </div>
-            <div>
+            <div className="userinfo__item">
               <span>Địa chỉ:</span> {user.address}
             </div>
-            <div>
+            <div className="userinfo__item">
               <span>Email:</span> {user.email}
             </div>
-            <div>
+            <div className="userinfo__item">
               <span>Số điện thoại:</span> {user.phoneNumber}
             </div>
-            <div>
+            <div className="userinfo__item">
               <span>Số dư:</span> ${user.accountBalance.toFixed(2)}
             </div>
             <div className="edit-user__modal">

@@ -1,81 +1,82 @@
+
 .header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 50px;
+  
+
+  &__logo {
+    display: flex; 
+    gap: 10px;
+    justify-content: center;
     align-items: center;
-    padding: 5px 50px;
-    
-  
-    &__logo {
-      display: flex; 
-      gap: 10px;
-      justify-content: center;
-      align-items: center;
-  
-      .logo {
-        img {
-          /* logo */
-          width: 61px;
-          height: 59px;
-          /* Inside auto layout */
-          flex: none;
-          order: 0;
-          flex-grow: 0;
-        }
-      }
-  
-      .name {
-        /* SkinClinic */
-  
-        width: 123px;
-        height: 41px;
-  
-        font-family: "Montserrat";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 34px;
-        line-height: 41px;
-  
-        color: #000000;
-  
+
+    .logo {
+      img {
+        /* logo */
+        width: 61px;
+        height: 59px;
         /* Inside auto layout */
         flex: none;
-        order: 1;
+        order: 0;
         flex-grow: 0;
       }
-    } 
-  
-    &__nav {
+    }
+
+    .name {
+      /* SkinClinic */
+
+      width: 123px;
+      height: 41px;
+
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 34px;
+      line-height: 41px;
+
+      color: #000000;
+
+      /* Inside auto layout */
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+    }
+  } 
+
+  &__nav {
+    
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
       
-      ul {
+
+      li {
+        font-size: 12px;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+
+  &__icon{
+    ul{
         display: flex;
         list-style: none;
         gap: 30px;
         justify-content: center;
         align-items: center;
-        
-  
-        li {
-          font-size: 12px;
-          a {
+        a{
             text-decoration: none;
             color: black;
-          }
         }
-      }
-    }
-  
-    &__icon{
-      ul{
-          display: flex;
-          list-style: none;
-          gap: 30px;
-          justify-content: center;
-          align-items: center;
-          a{
-              text-decoration: none;
-              color: black;
-          }
-          
-      }
+        
     }
   }
+}

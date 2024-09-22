@@ -1,53 +1,61 @@
-import { Button } from "antd";
 import "./admin.scss";
-import logo from "/src/img/logo.svg";
-import  Header  from "/src/components/headers/index";
-import { Container } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
-function Admin() {
+import { Input, Space, Button } from "antd";
+import AdminHeader from "../../components/admin-headers";
+import SideBar from "../../components/sidebar";
+const { Search } = Input;
+
+const onSearch = (value) => {
+  console.log(value);
+};
+
+const Admin = () => {
   return (
-    <>
-      <Header />
-      <Container>
-      <div className="admin__container">
-        <div className="admin__title"> Quản lý </div>
-        <div className="button__manage">
-          <div>
-            <Button
-              icon={<img src={logo} alt="logo" style={{ width: "24px" }} />}
-            >
-              <NavLink to="/">Hồ sơ khách hàng</NavLink>
-            </Button> 
-            <Button
-              icon={<img src={logo} alt="logo" style={{ width: "24px" }} />}
-            >
-              <NavLink> Quản lý ký gửi</NavLink>
-            </Button>
-          </div>
-          <div>
-            <Button
-              icon={<img src={logo} alt="logo" style={{ width: "24px" }} />}
-            >
-              <NavLink>Quản lý giống cá</NavLink>
-            </Button>
-            <Button
-              icon={<img src={logo} alt="logo" style={{ width: "24px" }} />}
-            >
-            <NavLink>Quản lý đơn hàng</NavLink>
-            </Button>
-          </div>
+    <div className="admin">
+      <SideBar/>
+      <div className="content">
+        <AdminHeader/>
+        <h1 className="content__title">Trang quản lý</h1>
+        <div className="content__filter">
+          <Space direction="vertical">
+            <Search
+              placeholder="input search text"
+              onSearch={onSearch}
+              style={{ width: 400 }}
+              name="SearchValue"
+              enterButton
+            />
+          </Space>
+          <Button type="primary">Thêm mới người dùng</Button>
         </div>
-        <div className="button__last">
-          <Button
-            icon={<img src={logo} alt="logo" style={{ width: "24px" }} />}
-          >
-            <NavLink>Thống kê và báo cáo</NavLink>
-          </Button>
+        <div className="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Họ và tên</th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+                <th>Địa chỉ</th>
+                <th>Số dư ví</th>
+                <th>Thao tác</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+                <td>Germany</td>
+                <td>Germany</td>
+                <td>
+                  <Button type="primary">Chỉnh sửa</Button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      </Container>
-    </>
+    </div>
   );
-}
+};
 
 export default Admin;

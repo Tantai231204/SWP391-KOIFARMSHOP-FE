@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import logo from "/src/img/logo.svg";
-import "./index.scss";
 import {
   SearchOutlined,
   UserOutlined,
@@ -50,7 +49,7 @@ function Header() {
       <div className="header__icon">
         <ul>
           <li>
-            <Link to="/">
+            <Link to="/login">
               <UserOutlined />
             </Link>
           </li>
