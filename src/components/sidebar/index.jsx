@@ -28,6 +28,9 @@ function SideBar() {
           <span className="sidebar__icon">⌘</span>
           <Link to="">Báo cáo và thông kê</Link>
         </div>
+        <div className="sidebar__logout">
+          <Link to="/logout">Đăng xuất</Link>
+        </div>
       </div>
     </>
   );
